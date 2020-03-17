@@ -1,4 +1,5 @@
-Exercicios Shell Script!!
+Descrição dos exercícios e do que faz cada arquivo: 
+
 
 1. Escreva um Shell Script que imprima na tela a frase: "Shell Script é demais!";
 2. Modifique o Shell Script do exercício anterior para incluir uma variável. A variável deverá receber o conteúdo da mensagem: "Shell Script com variáveis é demais!";
