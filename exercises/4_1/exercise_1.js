@@ -3,16 +3,31 @@ let num2 = 5;
 let resultado;
 
 //Programa para adição
-resultado = num1+num2
+function sum(a,b){
+  return a+b;
+}
+
 
 //Programa para subtração
-resultado = num1 - num2;
+function sub(a,b){
+  return a-b;
+}
 
 //Programa para Multiplicação
-resultado =  num1 * num2;
+function mul(a,b){
+  return a*b;
+}
 
 //Programa para divisão
-resultado = num1 / num1;
-
+function div(a,b){
+  return a/b;
+}
 //Programa para modulo
-resultado = num1 % num2;
+function rest(a,b){
+  return a%b;
+}
+console.log("Soma =",sum (num1,num2));
+console.log("Subtração =",sub (num1,num2));
+console.log("multiplicação =",mul (num1,num2));
+console.log("adição =",div (num1,num2));
+console.log("Operador de resto =",rest (num1,num2));
