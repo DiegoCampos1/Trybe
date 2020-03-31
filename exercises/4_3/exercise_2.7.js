@@ -7,7 +7,7 @@ let varredura = a.length - b.length;
 for (i=varredura; i<a.length; i++){
   finalPalavra += a[i]
 }
-if (finalPalavra == b) {
+if (finalPalavra === b) {
   return true;
 }else {
   return false;
