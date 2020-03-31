@@ -25,4 +25,4 @@ let resultado = armazenaDefinitivo[0];
 return resultado;
 }
 
-console.log(mostCommon(array)); 
+console.log(mostCommon(array));

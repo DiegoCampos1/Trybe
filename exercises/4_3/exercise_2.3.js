@@ -5,7 +5,7 @@ function resultado2 (a) {
   let menor = a[0];
   for (i=1; i<a.length; i++){
     if (a[i] < menor){
-      maior = a[i];
+      menor = a[i];
     }
   }
   return a.indexOf(maior);
