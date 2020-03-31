@@ -1,21 +1,16 @@
 let word = "trybe";
 let ending = "be";
 
-function verificaFimPalavra (palavra, final){
-let guardaWord ="";
-let guardaEnding ="";
-
-for(i=0; i<palavra.length; i+=1){
-  
-guardaWord +=palavra[i];
+function verificaFimPalavra (a, b) {
+let finalPalavra = '';
+let varredura = a.length - b.length;
+for (i=varredura; i<a.length; i++){
+  finalPalavra += a[i]
 }
-for(i=0; i<final.length; i+=1){
-  guardaEnding +=final[i];
+if (finalPalavra == b) {
+  return true;
+}else {
+  return false;
 }
-if (guardaEnding  )
-return guardaWord + guardaEnding;
-
 }
-
-
 console.log(verificaFimPalavra(word, ending));
