@@ -55,17 +55,22 @@
   </head>
   <body>
     <script>
+      //1
       let title = document.createElement("h1");
       title.innerHTML = "Exercício 4.5 - JavaScript DOM";
       document.body.appendChild(title);
-
+      //2
       let firstDiv = document.createElement("div");
       firstDiv.className = "main-content";
       document.body.appendChild(firstDiv);
-
-      let chilDiv = document.createElement("div");
-      chilDiv.className = "center-content";
-      firstDiv.appendChild(chilDiv);
+      //3
+      let childDiv = document.createElement("div");
+      childDiv.className = "center-content";
+      firstDiv.appendChild(childDiv);
+      //4
+      let paragrafo = document.createElement("p");
+      paragrafo.innerHTML = "Aprendendo JavaScript";
+      childDiv.appendChild(paragrafo);
 
     </script>
   </body>
