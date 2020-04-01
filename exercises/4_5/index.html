@@ -100,11 +100,16 @@
       h3[index] = document.createElement("h3");
       firstDiv.appendChild(h3[index]);
       }
-      //Adicione a classe title na tag h1 criada;
+      //1 Adicione a classe title na tag h1 criada;
       title.className = "title 1"
-
+      //2 Adicione a classe description nas 3 tags h3 criadas;
+     
+      let h=[]
+      for (index = 0 ; index < 3 ; index ++){
+      h = document.querySelectorAll("h3")[index];
+      h.className = "description"
+      }
       
-
     </script>
   </body>
 </html>
