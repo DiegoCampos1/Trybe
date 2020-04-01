@@ -84,7 +84,18 @@
       img.src="https://picsum.photos/200";
       img.className = "small-image";
       div5.appendChild(img);
+      //8
+      let array = ["um", "dois", "três", "quatro", "cinco", "seis", "sete", "oito", "nove", "dez"]
+      let lista = document.createElement("ul")
 
+      for (let indice in array){
+      let item = document.createElement("li");
+      item.innerHTML = array[indice];
+      lista.appendChild(item);
+      }
+      div6.appendChild(lista);
+      //9
+      
 
 
 
