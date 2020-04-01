@@ -85,7 +85,7 @@
       img.className = "small-image";
       div5.appendChild(img);
       //8
-      let array = ["um", "dois", "três", "quatro", "cinco", "seis", "sete", "oito", "nove", "dez"]
+      let array = ["um", "dois", "três", "quatro", "cinco", "seis", "sete", "oito", "nove", "dez", ]
       let lista = document.createElement("ul")
 
       for (let indice in array){
@@ -94,10 +94,15 @@
       lista.appendChild(item);
       }
       div6.appendChild(lista);
-      //9
+      //9 Adicione 3 tags h3, todas sendo filhas do div criado no passo 2.
+      let h3 =[]
+      for (index = 0 ; index < 3 ; index ++){
+      h3[index] = document.createElement("h3");
+      firstDiv.appendChild(h3[index]);
+      }
+      //
+
       
-
-
 
     </script>
   </body>
