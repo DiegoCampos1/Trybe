@@ -8,25 +8,27 @@
 <img id='cat' style="position:absolute;" src="http://www.anniemation.com/clip_art/images/cat-walk.gif">
 </img>
 <script>
-let cat = document.querySelector('#cat');
-cat.style.marginLeft = 0;
 
+var cat = document.getElementsByTagName('img')[0];
+cat.style.left = '0px';
+var walkForwards = true;
 function catWalk() {
-cat.style.marginLeft = parseInt(cat.style.marginLeft) + 10 + 'px';
-if (parseInt(cat.style.marginLeft) > window.innerWidth - 296){
-cat.style.marginLeft = 0
+  var currentLeft = parseInt(cat.style.left);
+  
+  if (walkForwards && (currentLeft > (window.innerWidth-cat.width))) {
+    walkForwards = false;
+  }
+  if (!walkForwards && (currentLeft <= 0)) {
+    walkForwards = true;
+  }
+  
+  if (walkForwards) {
+    cat.style.left = (currentLeft + 10) + 'px';
+  } else {
+    cat.style.left = (currentLeft - 10) + 'px';
+  }
 }
-};
-
-function catBack() {
-cat.style.marginLeft = parseInt(cat.style.marginLeft) - 10 + 'px';
-};
-
-const front = setInterval(catWalk, 50);
-
-// if (cat.style.marginLeft = 0) {
-// const front = setInterval(catWalk, 50)}
-// else if (cat.style.marginLeft > window.innerWidth) {const back = setInterval(catBack, 50)};
+window.setInterval(catWalk, 50);
 
 
 </script>
