@@ -28,13 +28,35 @@
       const body = document.querySelector("body")
       
       button.addEventListener("click", function(){
-      cor = localStorage.setItem("backgroundColor", backgroundColor.value)
+
+      localStorage.setItem("backgroundColor", backgroundColor.value);
       body.style.backgroundColor = backgroundColor.value ;
-      })
       
-      const cor = localStorage.backgroundColor
-      if (cor) body.style.backgroundColor = cor;
+      localStorage.setItem("color", color.value);
+      body.style.color = color.value ;
+
+      localStorage.setItem("fontSize", fontSize.value);
+      body.style.fontSize = fontSize.value ;
+
+      localStorage.setItem("lineHeight", lineHeight.value);
+      body.style.lineHeight = lineHeight.value ;
+
+      localStorage.setItem("fontFamily", fontFamily.value);
+      body.style.color = fontFamily.value ;
+
+
+            
+      });
+       
+           
+      if (localStorage.backgroundColor) body.style.backgroundColor = localStorage.backgroundColor;
+      if (localStorage.color) body.style.color = localStorage.color;
+      if (localStorage.fontSize) body.style.fontSize = localStorage.fontSize;
+      if (localStorage.lineHeight) body.style.lineHeight = localStorage.lineHeight;
+      if (localStorage.fontFamily) body.style.fontFamily = localStorage.fontFamily;
     }
+
+
       
   </script>
 </body>
