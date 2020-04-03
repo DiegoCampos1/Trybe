@@ -7,7 +7,7 @@
   <link rel="stylesheet" type="text/css" href="http://nptcstudents.co.uk/andrewg/jsweb/css/reset.css" />
   <link rel="stylesheet" type="text/css" href="http://nptcstudents.co.uk/andrewg/jsweb/css/jsweb.css" />
 
-
+  <script></script>
   
   
 
@@ -44,16 +44,29 @@
           the phrase &quot;&pound;(result) off!&quot;. You will need <a
             href="http://nptcstudents.co.uk/andrewg/jsweb/maths.html" target="_blank">concatenation</a> to achieve this.
         </p>
-
+        <button id="buttonA"> your button here </button>
         <script language="javascript" type="text/javascript">
-				  let button = document.querySelector("#button")
-          console.log(button)
-    
+
+          let gamePrice = 39.99
+          let discount = 0.20
+          let button2 = document.querySelector("#buttonA")
+          console.log(button2)
+          
+          function alerta2 (){
+            let resultado = gamePrice * discount
+            alert("£ " + resultado + " fora!")
+          }
+          button2.addEventListener("click", alerta2)
+
+				  let button = document.querySelector("#button")              
           function alerta (){
             alert("You clicked the button")
           }
           button.addEventListener("click", alerta)
+
         </script>
+
+        
 
         <p>You may want to consider using JavaScript's built in <a href="http://www.w3schools.com/js/js_obj_math.asp"
             target="_blank">Maths object</a> to round the number you get in your result to a more reasonable one.</p>
