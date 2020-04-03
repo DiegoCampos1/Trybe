@@ -45,6 +45,8 @@
             href="http://nptcstudents.co.uk/andrewg/jsweb/maths.html" target="_blank">concatenation</a> to achieve this.
         </p>
         <button id="buttonA"> your button here </button>
+        <img id="#foto" src="/image/foto-arquivo-pbh-21.jpg"></img>
+
         <script language="javascript" type="text/javascript">
 
           let gamePrice = 39.99
@@ -64,8 +66,15 @@
           }
           button.addEventListener("click", alerta)
 
+          let foto = document.querySelector('#foto');
 
-        //https://www.w3schools.com/jsref/event_onmouseout.asp 
+          foto.addEventListener('mouseover', e => {
+          foto.src= "/image/2.jpg";
+          });
+
+          foto.addEventListener('mouseout', e => {
+          foto.src= "/image/foto-arquivo-pbh-21.jpg";
+         
         </script>
 
         
