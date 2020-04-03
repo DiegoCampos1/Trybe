@@ -51,18 +51,34 @@
     let solution = document.querySelector("#solution")
     
     function squareNumber (){
-      var a = squareImput.value
-      var resultado = a**2
+      let a = squareImput.value
+      let resultado = a**2
       solution.innerText = resultado;
     }
 
-    let halfNummber = x => x/2;
-    let percentOf = (x,y) => (x/y) * 100;
-    let areaofCircle = radius => 3.14 * radius**2;
-
-    squareButton.addEventListener("click", squareNumber)
+    function halfNumber(){
+      let a = halfInput.value
+      let resultado = a/2
+      solution.innerText = resultado;
+    }
     
-
+    function percent(){
+      let a = percent1Input.value
+      let b = percent2Input.value
+      let resultado = (a/b) *100
+      solution.innerText = resultado + " %";
+    }
+       
+    function area (){
+      let a = areaInput.value;
+      let resultado = 3.14 * (a**2)
+      solution.innerText = resultado
+    }
+    
+    squareButton.addEventListener("click", squareNumber)
+    halfButton.addEventListener("click", halfNumber)
+    percentButton.addEventListener("click", percent)
+    areaButton.addEventListener("click", area)
 
   </script>
   
