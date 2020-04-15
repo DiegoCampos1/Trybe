@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form>
+  <input id="backgroundColor" type=text> Cor</input><br>
+  <input id="color" type=text> Cor do texto</input><br>
+  <input id="fontSize" type=text> Tamanho da Fonte</input><br>
+  <input id="lineHeight" type=text> Espaçamento entre linhas</input><br>
+  <input id="fontFamily" type=text> Tipo de fonte</input><br>
+  <button id="button"> Aperte aqui meu consagrado</button><br>
+  </form>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia corporis alias quidem libero vero. Perferendis voluptate nam sed adipisci necessitatibus ipsa voluptas ullam, cupiditate magnam eveniet possimus enim qui sint.</p>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum velit et dolorem ullam quidem, esse delectus non ab quae quo, aliquid fugit libero quis tempore rem repellat perspiciatis amet at.</p>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, molestias deleniti? Distinctio alias odit nemo voluptas dolorum. Neque expedita quia a sed unde adipisci quis eveniet aperiam, distinctio itaque optio.</p>
+  <script>
+    window.onload = function(){
+      const button = document.querySelector("#button");
+      const backgroundColor = document.querySelector("#backgroundColor");
+      const fontSize = document.querySelector("#fontSize");
+      const lineHeight = document.querySelector("#lineHeight");
+      const fontFamily = document.querySelector("#fontFamily");
+      const color = document.querySelector("#color");
+      const body = document.querySelector("body")
+      
+      button.addEventListener("click", function(){
+
+      localStorage.setItem("backgroundColor", backgroundColor.value);
+      body.style.backgroundColor = backgroundColor.value ;
+      
+      localStorage.setItem("color", color.value);
+      body.style.color = color.value ;
+
+      localStorage.setItem("fontSize", fontSize.value);
+      body.style.fontSize = fontSize.value ;
+
+      localStorage.setItem("lineHeight", lineHeight.value);
+      body.style.lineHeight = lineHeight.value ;
+
+      localStorage.setItem("fontFamily", fontFamily.value);
+      body.style.color = fontFamily.value ;
+
+
+            
+      });
+       
+           
+      if (localStorage.backgroundColor) body.style.backgroundColor = localStorage.backgroundColor;
+      if (localStorage.color) body.style.color = localStorage.color;
+      if (localStorage.fontSize) body.style.fontSize = localStorage.fontSize;
+      if (localStorage.lineHeight) body.style.lineHeight = localStorage.lineHeight;
+      if (localStorage.fontFamily) body.style.fontFamily = localStorage.fontFamily;
+    }
+
+
+      
+  </script>
+</body>
+</html>

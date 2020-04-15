@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>Calculator</title>
+</head>
+<body>
+
+  <label>Square this number:
+    <input type="number" id="square-input" size="2">
+  </label>
+  <button id="square-button">Calculate</button>
+  <br><br>
+  
+  <label>Half this number:
+    <input type="number" id="half-input" size="2">
+  </label>
+  <button id="half-button">Calculate</button>
+  <br><br>
+  
+  <label>
+    Fraction:
+    <input type="number" id="percent1-input" size="2">
+  </label>
+  <label>
+    Whole:
+    <input type="number" id="percent2-input" size="2">
+  </label>
+  <button id="percent-button">Calculate</button>
+  <br><br>
+  
+  <label>Calculate area of circle with radius:
+    <input type="number" id="area-input" size="2">
+  </label>
+  <button id="area-button">Calculate</button> 
+  <br><br>
+  <div id="solution"></div>
+
+  <script>
+
+    let squareImput = document.querySelector("#square-input")
+    let halfInput = document.querySelector("#half-input")
+    let percent1Input = document.querySelector("#percent1-input")
+    let percent2Input = document.querySelector("#percent2-input")
+    let areaInput = document.querySelector("#area-input")
+
+    let squareButton = document.querySelector("#square-button")
+    let halfButton = document.querySelector("#half-button")
+    let percentButton = document.querySelector("#percent-button")
+    let areaButton = document.querySelector("#area-button")
+    let solution = document.querySelector("#solution")
+    
+    function squareNumber (){
+      let a = squareImput.value
+      let resultado = a**2
+      solution.innerText = resultado;
+    }
+
+    function halfNumber(){
+      let a = halfInput.value
+      let resultado = a/2
+      solution.innerText = resultado;
+    }
+    
+    function percent(){
+      let a = percent1Input.value
+      let b = percent2Input.value
+      let resultado = (a/b) *100
+      solution.innerText = resultado + " %";
+    }
+       
+    function area (){
+      let a = areaInput.value;
+      let resultado = 3.14 * (a**2)
+      solution.innerText = resultado
+    }
+    
+    squareButton.addEventListener("click", squareNumber)
+    halfButton.addEventListener("click", halfNumber)
+    percentButton.addEventListener("click", percent)
+    areaButton.addEventListener("click", area)
+
+  </script>
+  
+</body>

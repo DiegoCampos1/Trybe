@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8" />
+  <title></title>
+ </head>
+ <body>
+ 
+ <h1>Preencher:</h1>
+ 
+ <ul>
+  <li>Nome <input type="text" id="noun">
+  <li>Atividade Preferida <input type="text" id="adjective">
+  <li>Lugar preferido <input type="text" id="person">
+ </ul>
+ 
+ <button id="resultado">Lib it!</button>
+  
+ <div id="story"></div>
+
+ <script>
+
+  var botao = document.getElementById('lib-button');
+
+  function makeMadLib() {
+    var resultado = document.querySelector("story");
+    var lugar = document.getElementById("person").value;
+    var  atividade = document.getElementById("adjective").value;
+    var nome = document.getElementById("noun").value;
+    resultado.innerHTML = nome + " gostaria de " + atividade + " no(a) " + lugar   
+    }
+
+
+  botao.addEventListener('click', makeMadLib);
+
+ </script>
+  
+ </body>
+</html>
