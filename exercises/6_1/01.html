@@ -6,6 +6,36 @@
   <title>Aula 01- Formularios</title>
 </head>
 <body>
-  
+  <form>
+    <fieldset>
+      <label for="name">Name</label>
+      <input type="text" placeholder="Enter name" name="name" maxlength="40" required><br><br>
+      
+      <label for="email">Email</label>
+      <input id="email" type="text" placeholder="Enter Email" name="email" maxlength="40" required ><br><br>
+      
+      <label for="cpf">CPF</label>
+      <input id="cpf" type="number" placeholder="Enter CPF" name="cpf" maxlength="11" required ><br><br>
+      
+      <label for="endereco">Endereço</label>
+      <input id="endereco" type="text" placeholder="Rua Av etc" name="endereco" maxlength="200" required ><br><br>
+      
+      <label for="Estado">Estado</label>
+      <select required name="estado">
+        <option selected value="">Selecione</option>
+        <option value="1">Acre</option>
+      </select>
+      <br><br>
+      
+      <label for="cidade">Cidade</label>
+      <input id="cidade" type="text" placeholder="Enter cidade" name="cidade" maxlength="28" required ><br><br>
+      
+      <label for="cidade">Tipo</label>
+      <input type="radio" name"tipo" value="Ap">Ap
+      <input type="radio" name"tipo" value="casa">casa<br><br>
+     
+      <button id="button1" onclick="ValidateEmail()">Enviar</button>
+    </fieldset>
+  </form>
 </body>
 </html>
