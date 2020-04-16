@@ -12,22 +12,24 @@ for (let i = 0; i < uf.length; i += 1){
 const email = document.querySelector('#email')
 console.log(email)
 
+
 function validateEmail() {
 console.log(email.value)
-//   var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-//  if(inputText.value.match(mailformat)) {
-// // document.form1.text1.focus();
-// console.log(`ok`)
-// return true;
+  var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+  if(email.value.match(mailformat)) {
+// document.form1.text1.focus();
+ console.log(`ok`)
+ return true;
 
-// } else {
-// alert("You have entered an invalid email address!");
-// // document.form1.text1.focus();
-// console.log(`false`)
-// return false;
-// }
+ } else {
+ alert("You have entered an invalid email address!");
+// document.form1.text1.focus();
+console.log(`false`)
+return false;
+}
 }
 
-email.addEventListener('blur',validateEmail())
-console.log(email.value)
+
+email.addEventListener('change',validateEmail)
+
 // button1.addEventListener('click', ValidateEmail)
