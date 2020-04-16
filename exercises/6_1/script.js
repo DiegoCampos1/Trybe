@@ -32,4 +32,3 @@ return false;
 
 email.addEventListener('change',validateEmail)
 
-// button1.addEventListener('click', ValidateEmail)
