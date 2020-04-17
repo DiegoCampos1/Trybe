@@ -11,111 +11,120 @@
 
 <body>
   <section class="section">
-    
-      <div class="container">
-        <h1 class="title">
-          Formulário treinamento
-        </h1>
-        <p class="subtitle">
-          <em>Preencha os campos a seguir</em>:
-        </p>
-        <form class='section'></form>
-        <!-- Name -->
-        <div class="field">
-          <label class="label">Name</label>
-          <div class="control">
-            <input class="input" type="text" placeholder="Text input">
-          </div>
-        </div>
-        <!-- E-mail -->
-        <div class="field">
-          <label class="label">Email</label>
-          <div class="control has-icons-left has-icons-right">
-            <input class="input" type="email" placeholder="Email input">
-            <span class="icon is-small is-left">
-              <i class="fas fa-envelope"></i>
-            </span>
-            <span class="icon is-small is-right">
-              <i class="fas fa-exclamation-triangle"></i>
-            </span>
-          </div>
-        </div>
-        <!-- CPF   -->
-        <div class="field">
-          <label class="label">CPF</label>
-          <div class="control">
-            <input class="input" type="text" maxlength="11" placeholder="Number input" required>
-          </div>
-        </div>
-        <!-- Rua -->
-        <div class="field">
-          <label class="label">Endereço</label>
-          <div class="control">
-            <input class="input" type="text" maxlength="200" placeholder="Rua, Av, etc..." required>
-          </div>
-        </div>
-        <!-- selected -->
-        <div class="field">
-          <label class="label">Estado</label>
-          <div class="control">
-            <div class="select">
-              <select id="select">
-                <option>Selecione</option>
-              </select>
-            </div>
-          </div>
-        </div>
-        <!-- Cidade -->
-        <div class="field">
-          <label class="label">Cidade</label>
-          <div class="control">
-            <input class="input" type="text" maxlength="200" placeholder="Text Input" required>
-          </div>
-        </div>
-        <!-- Tipo -->
-        <div class="control">
-          <label class="radio">
-            <input type="radio" name="tipo">
-            Casa
-          </label>
-          <label class="radio">
-            <input type="radio" name="tipo">
-            Apartamento
-          </label>
-        </div>
-        <hr>
-        <!-- resumo Curriculo -->
-        <div class="field">
-          <label class="label">Resumo do currículo</label>
-          <div class="control">
-            <textarea class="textarea is-info" placeholder="Success textarea"></textarea>
-          </div>
-        </div>
-        <!-- Cargo -->
-        <div class="field">
-          <label class="label">Cargo</label>
-          <div class="control">
-            <input class="input" type="text" maxlength="200" placeholder="Text Input" required>
-          </div>
-        </div>
-        <!-- resumo cargo -->
-        <div class="field">
-          <label class="label">Descrição do cargo</label>
-          <div class="control">
-            <textarea class="textarea is-info" placeholder="Success textarea"></textarea>
-          </div>
-        </div>
-        <!-- Data inicio  -->
-        <!-- Cargo -->
-        <div class="field">
-          <label class="label">Data de inicio</label>
-          <div class="control">
-            <input class="input" type="date" maxlength="200" placeholder="Text Input" required>
-          </div>
-        </div>
-        
 
-    </form>
+    <div class="container">
+      <h1 class="title">
+        Formulário treinamento
+      </h1>
+      <p class="subtitle">
+        <em>Preencha os campos a seguir</em>:
+      </p>
+
+      <form id="form1" class='section' action='' method="get"></form>
+      <!-- Name -->
+      <div class="field">
+        <label class="label">Name</label>
+        <div class="control">
+          <input class="input" type="text" placeholder="Text input">
+        </div>
+      </div>
+      <!-- E-mail -->
+      <div class="field">
+        <label class="label">Email</label>
+        <div class="control has-icons-left has-icons-right">
+          <input class="input" type="email" placeholder="Email input">
+          <span class="icon is-small is-left">
+            <i class="fas fa-envelope"></i>
+          </span>
+          <span class="icon is-small is-right">
+            <i class="fas fa-exclamation-triangle"></i>
+          </span>
+        </div>
+      </div>
+      <!-- CPF   -->
+      <div class="field">
+        <label class="label">CPF</label>
+        <div class="control">
+          <input class="input" type="text" maxlength="11" placeholder="Number input" required>
+        </div>
+      </div>
+      <!-- Rua -->
+      <div class="field">
+        <label class="label">Endereço</label>
+        <div class="control">
+          <input class="input" type="text" maxlength="200" placeholder="Rua, Av, etc..." required>
+        </div>
+      </div>
+      <!-- selected -->
+      <div class="field">
+        <label class="label">Estado</label>
+        <div class="control">
+          <div class="select">
+            <select id="select">
+              <option>Selecione</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <!-- Cidade -->
+      <div class="field">
+        <label class="label">Cidade</label>
+        <div class="control">
+          <input class="input" type="text" maxlength="200" placeholder="Text Input" required>
+        </div>
+      </div>
+      <!-- Tipo -->
+      <div class="control">
+        <label class="radio">
+          <input type="radio" name="tipo">
+          Casa
+        </label>
+        <label class="radio">
+          <input type="radio" name="tipo">
+          Apartamento
+        </label>
+      </div>
+      <hr>
+      <!-- resumo Curriculo -->
+      <div class="field">
+        <label class="label">Resumo do currículo</label>
+        <div class="control">
+          <textarea class="textarea is-info" placeholder="Success textarea"></textarea>
+        </div>
+      </div>
+      <!-- Cargo -->
+      <div class="field">
+        <label class="label">Cargo</label>
+        <div class="control">
+          <input class="input" type="text" maxlength="200" placeholder="Text Input" required>
+        </div>
+      </div>
+      <!-- resumo cargo -->
+      <div class="field">
+        <label class="label">Descrição do cargo</label>
+        <div class="control">
+          <textarea class="textarea is-info" placeholder="Success textarea"></textarea>
+        </div>
+      </div>
+      <!-- Data inicio  -->
+      <!-- Cargo -->
+      <div class="field">
+        <label class="label">Data de inicio</label>
+        <div class="control">
+          <input class="input" type="date" maxlength="200" placeholder="Text Input" required>
+        </div>
+      </div>
+      <!-- botoes -->
+      <div class="field is-grouped">
+        <div class="control">
+          <button type="submit" form="form1" value="Submit" class="button is-link submit">Submit</button>
+        </div>
+        <div class="control">
+          <button ype="reset" value="Reset" form="form1" class="button is-link is-light">Cancel</button>
+        </div>
+      </div>
+
+      </form>
   </section>
   <script src="script.js"></script>
 </body>
