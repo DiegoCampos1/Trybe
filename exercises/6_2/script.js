@@ -4,9 +4,9 @@ const uf = ["AC", "AL", "AM", "AP", "BA", "CE", "DF", "ES", "GO", "MA", "MT", "M
 
 const estado = document.querySelector('#select')
 
-// for (let i = 0; i < uf.length; i += 1){
-//   estado.innerHTML += ` <option value=${uf[i]}>${uf[i]}</option>`
-// }
+ for (let i = 0; i < uf.length; i += 1){
+   estado.innerHTML += ` <option value=${uf[i]}>${uf[i]}</option>`
+ }
 
 
 const email = document.querySelector('#email')

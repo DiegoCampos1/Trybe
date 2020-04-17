@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hello Bulma!</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+</head>
+
+<body>
+  <section class="section">
+    <div class="container">
+      <h1 class="title">
+        Formulário treinamento
+      </h1>
+      <p class="subtitle">
+        <em>Preencha os campos a seguir</em>:
+      </p>
+      <!-- Name -->
+      <div class="field">
+        <label class="label">Name</label>
+        <div class="control">
+          <input class="input" type="text" placeholder="Text input">
+        </div>
+      </div>
+      <!-- E-mail -->
+      <div class="field">
+        <label class="label">Email</label>
+        <div class="control has-icons-left has-icons-right">
+          <input class="input" type="email" placeholder="Email input">
+          <span class="icon is-small is-left">
+            <i class="fas fa-envelope"></i>
+          </span>
+          <span class="icon is-small is-right">
+            <i class="fas fa-exclamation-triangle"></i>
+          </span>
+        </div>
+      </div>
+      <!-- CPF   -->
+      <div class="field">
+        <label class="label">CPF</label>
+        <div class="control">
+          <input class="input" type="text" maxlength="11" placeholder="Number input" required>
+        </div>
+      </div>
+      <!-- Rua -->
+      <div class="field">
+        <label class="label">Endereço</label>
+        <div class="control">
+          <input class="input" type="text" maxlength="200" placeholder="Rua, Av, etc..." required>
+        </div>
+      </div>
+      <!-- selected -->
+      <div class="field">
+        <label class="label">Estado</label>
+        <div class="control">
+          <div class="select">
+            <select id="select">
+              <option>Selecione</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <script src="script.js"></script>
+    </div>
+  </section>
+</body>
+
+</html>
