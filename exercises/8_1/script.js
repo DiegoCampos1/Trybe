@@ -1,7 +1,14 @@
-const button = document.querySelector(".btn");
+const button = document.querySelector(".button1");
+const button2 = document.querySelector(".button2");
 const p = document.querySelector(".p1")
+const p2 = document.querySelector(".p2")
+const p3 = document.querySelector(".p3")
+input = document.querySelector(".form-control");
+
 let clickCount = 0
 console.log(button, p)
+
+//Contador de Clique
 button.addEventListener("click", () => {
   clickCount += 1
   if (clickCount < 10) {
@@ -9,6 +16,24 @@ button.addEventListener("click", () => {
   } else if (clickCount < 21) {
     p.innerHTML = `Já são ${clickCount} cliques, não tem mais o que fazer?!`
   } else {
-    p.innerHTML = `Cansei!! Só vou continuar contando porque sou obrigado via JS. ${clickCount} cliques na caralha do butão`
+    p.innerHTML = `Cansei!! Só vou continuar contando porque sou obrigado via JS. ${clickCount} cliques`
   }
+})
+
+// 4) Gerando a frase substituindo o '+', e ordenando o array skills para retornar as habilidades
+const skills =["HTML", "CSS", "JavaScript", "GitHub", "Comunicação"]
+
+button2.addEventListener("click", () => {
+  const name = input.value
+  const frase1 = `Tryber ${name} aqui!
+  tudo bem?`
+  p2.innerHTML = frase1
+  p3.innerHTML = `${frase1}
+  Minhas Principais habilidades são:
+  * ${skills.sort()[0]}
+  * ${skills.sort()[1]}
+  * ${skills.sort()[2]}
+  * ${skills.sort()[3]}
+  * ${skills.sort()[4]}
+  `
 })
