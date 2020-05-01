@@ -3,7 +3,7 @@ const button2 = document.querySelector(".button2");
 const p = document.querySelector(".p1")
 const p2 = document.querySelector(".p2")
 const p3 = document.querySelector(".p3")
-input = document.querySelector(".form-control");
+const input = document.querySelector(".form-control");
 const skills =["HTML", "CSS", "JavaScript", "GitHub", "Comunicação"]
 
 
@@ -23,15 +23,14 @@ button.addEventListener("click", () => {
 // 4) Gerando a frase e substituindo o '+', ordenando o array skills para printar na tela as habilidades
 button2.addEventListener("click", () => {
   const name = input.value
-  const frase1 = `Tryber ${name} aqui!<br>
+  const frase1 = `Tryber ${name} aqui!
   tudo bem?`
-  p2.innerHTML = frase1
-  p3.innerHTML = `${frase1}<br>
-  Minhas Principais habilidades são:<br>
-  * ${skills.sort()[0]}<br>
-  * ${skills.sort()[1]}<br>
-  * ${skills.sort()[2]}<br>
-  * ${skills.sort()[3]}<br>
-  * ${skills.sort()[4]}
-  `
+  p2.innerText = frase1
+  p3.innerText = `${frase1}
+  Minhas Principais habilidades são:
+  * ${skills.sort()[0]}
+  * ${skills.sort()[1]}
+  * ${skills.sort()[2]}
+  * ${skills.sort()[3]}
+  * ${skills.sort()[4]}`
 })
