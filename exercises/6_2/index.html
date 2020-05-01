@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Compiled and minified CSS -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
+</head>
+<body>
+  
+  <h1 class="center-align">Cadastre suas informações:</h1>
+  <form action='' method="get" class="pessoais">
+    <fieldset>
+      <label for="name">Name</label>
+      <input id="name" type="text" placeholder="Enter name" name="name" maxlength="40" required><br><br>
+      
+      <label for="email">Email</label>
+      <input id="email" type="email" placeholder="Enter Email" name="email" maxlength="40" ><br><br>
+      
+      <label for="cpf">CPF</label>
+      <input id="cpf" type="number" placeholder="Enter CPF" name="cpf" maxlength="11" required ><br><br>
+      
+      <label for="endereco">Endereço</label>
+      <input id="endereco" type="text" placeholder="Rua Av etc" name="endereco" maxlength="200" required ><br><br>
+      
+      <div class="input-field col s12">
+      
+      <select id="select" required name="estado">
+        <option value="" disabled selected>Choose your option</option>
+        <!-- <option selected value="">Selecione</option>
+        <option value="1">Acre</option> -->
+        </select>
+        <label classe="input-field">Estado</label>
+        </div>
+      </select>
+
+      
+
+      <br><br>
+      
+      <label for="cidade">Cidade</label>
+      <input id="cidade" type="text" placeholder="Enter cidade" name="cidade" maxlength="28" required ><br><br>
+      
+      
+      <div>
+      <label for="tipo"><input id = "tipo" type="radio" name="residencia" value="Ap" />Apartamento</label>
+      
+      <label for="tipo2"><input id="tipo2" type="radio" name="residencia" value="casa" />Casa</label>
+      </div>
+      <button class="btn waves-effect waves-light" type="submit" name="action">Enviar
+    <i class="material-icons right">send</i>
+      <!-- <button class="btn waves-effect waves-light" id="button1" type="submit" >Enviar</button> -->
+    </fieldset>
+  
+  <br>
+  
+    <fieldset>
+      <label for="resumo">Resumo do curriculo</label>
+      <textarea id="resumo" maxlength="1000"></textarea><br>
+      
+    </fieldset>l
+    <button class="waves-effect waves-light btn orange darken-1" id="button2" type="reset">Reset</button>
+    <script src="./path/to/just-validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="script.js"></script>
+  </form>
+</body>
+</html>

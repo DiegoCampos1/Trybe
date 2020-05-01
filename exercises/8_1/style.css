@@ -1,0 +1,21 @@
+body {
+  padding: 5%;
+  background-color: bisque;
+}
+h1 {
+  margin-top: 2%;
+}
+
+.form-control {
+  margin-top: 10px;
+}
+
+.button2 {
+  margin-top: 10px;
+}
+
+p{
+  margin-top: 10px;
+  font-size: 20px;
+  font-weight: 500;
+}
