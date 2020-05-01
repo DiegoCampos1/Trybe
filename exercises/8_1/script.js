@@ -23,15 +23,15 @@ button.addEventListener("click", () => {
 // 4) Gerando a frase e substituindo o '+', ordenando o array skills para printar na tela as habilidades
 button2.addEventListener("click", () => {
   const name = input.value
-  const frase1 = `Tryber ${name} aqui!
+  const frase1 = `Tryber ${name} aqui!<br>
   tudo bem?`
   p2.innerHTML = frase1
-  p3.innerHTML = `${frase1}
-  Minhas Principais habilidades são:
-  * ${skills.sort()[0]}
-  * ${skills.sort()[1]}
-  * ${skills.sort()[2]}
-  * ${skills.sort()[3]}
+  p3.innerHTML = `${frase1}<br>
+  Minhas Principais habilidades são:<br>
+  * ${skills.sort()[0]}<br>
+  * ${skills.sort()[1]}<br>
+  * ${skills.sort()[2]}<br>
+  * ${skills.sort()[3]}<br>
   * ${skills.sort()[4]}
   `
 })
