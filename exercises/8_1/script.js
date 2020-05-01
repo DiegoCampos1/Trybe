@@ -4,11 +4,11 @@ const p = document.querySelector(".p1")
 const p2 = document.querySelector(".p2")
 const p3 = document.querySelector(".p3")
 input = document.querySelector(".form-control");
+const skills =["HTML", "CSS", "JavaScript", "GitHub", "Comunicação"]
 
-let clickCount = 0
-console.log(button, p)
 
 //Contador de Clique
+let clickCount = 0
 button.addEventListener("click", () => {
   clickCount += 1
   if (clickCount < 10) {
@@ -20,9 +20,7 @@ button.addEventListener("click", () => {
   }
 })
 
-// 4) Gerando a frase substituindo o '+', e ordenando o array skills para retornar as habilidades
-const skills =["HTML", "CSS", "JavaScript", "GitHub", "Comunicação"]
-
+// 4) Gerando a frase e substituindo o '+', ordenando o array skills para printar na tela as habilidades
 button2.addEventListener("click", () => {
   const name = input.value
   const frase1 = `Tryber ${name} aqui!
