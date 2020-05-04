@@ -39,10 +39,10 @@ const values = (obj) => Object.values(obj)
 console.log(values(lesson3));
 // 5 Crie um objeto de nome allLessons, que deve agrupar todas as aulas através do Object.assign. 
 // Cada chave desse novo objeto será uma aula, sendo essas chaves: lesson1, lesson2 e lesson3.
-let allLessons = {}
-allLessons.lesson1 = Object.assign({},lesson1)
-allLessons.lesson2 = Object.assign({},lesson2)
-allLessons.lesson3 = Object.assign({},lesson3)
+let allLessons = Object.assign({}, {lesson1, lesson2, lesson3 })
+// allLessons.lesson1 = Object.assign({},lesson1)
+// allLessons.lesson2 = Object.assign({},lesson2)
+// allLessons.lesson3 = Object.assign({},lesson3)
 console.log(allLessons)
 // 6 Usando o objeto criado no exercício 5, crie uma função que retorne o número total de estudantes em todas as aulas.
 const sum = (allLessons.lesson1.numeroEstudantes) +
@@ -67,4 +67,38 @@ function verification (objt, key, value) {
 }
 console.log(verification(lesson3, 'materia', 'Maria Clara'))
 
+// Bonus 1 :
+// Crie uma função para contar quantos estudantes assistiram as aulas de matemática. Use o objeto criado no exercício 5. allLessons
+function sum2 (obj) {
+  return obj.lesson1.numeroEstudantes + obj.lesson3.numeroEstudantes
+}
+console.log(sum2(allLessons))
+// Bonus 2 :
+// Crie uma função que deverá retornar um objeto que representa o relatório do professor ou professora, 
+// as aulas que ele ou ela ministrou e o número total de estudantes. Use o objeto criado no exercício 5:
 
+
+function createReport (obj, prof) {
+  let professor = ''
+  let aulas = []
+  let estudantes = 0
+  if (obj.lesson1.professor === prof) {  
+    professor = prof;
+    aulas.push(obj.lesson1.materia)
+    estudantes += obj.lesson1.numeroEstudantes
+  }
+  if (obj.lesson2.professor === prof) {  
+    professor = prof;
+    aulas.push(obj.lesson2.materia)
+    estudantes += obj.lesson2.numeroEstudantes
+  }
+  if (obj.lesson3.professor === prof) { 
+    professor = prof;
+    aulas.push(obj.lesson3.materia)
+    estudantes += obj.lesson3.numeroEstudantes
+  }
+
+  const newArray = Object.assign({}, {professor, aulas, estudantes})
+  return newArray
+}
+console.log(createReport(allLessons, 'Maria Clara'))
