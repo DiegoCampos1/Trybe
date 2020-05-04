@@ -90,26 +90,16 @@ console.log(sum2(allLessons))
 
 
 function createReport(obj, prof) {
-  let professor = ''
-  let aulas = []
-  let estudantes = 0
-  if (obj.lesson1.professor === prof) {
-    professor = prof;
-    aulas.push(obj.lesson1.materia)
-    estudantes += obj.lesson1.numeroEstudantes
+  let professor = '';
+  let aulas = [];
+  let estudantes = 0;
+  for (lesson of Object.keys(obj)) {
+    if (prof === obj[lesson].professor) {
+      estudantes += obj[lesson].numeroEstudantes;
+      professor = prof;
+      aulas.push(obj[lesson].materia);
+    }
   }
-  if (obj.lesson2.professor === prof) {
-    professor = prof;
-    aulas.push(obj.lesson2.materia)
-    estudantes += obj.lesson2.numeroEstudantes
-  }
-  if (obj.lesson3.professor === prof) {
-    professor = prof;
-    aulas.push(obj.lesson3.materia)
-    estudantes += obj.lesson3.numeroEstudantes
-  }
-
-  const newArray = Object.assign({}, { professor, aulas, estudantes })
-  return newArray
+  return newArray = Object.assign({}, { professor, aulas, estudantes });
 }
-console.log(createReport(allLessons, 'Maria Clara'))
+console.log(createReport(allLessons, 'Maria Clara'));
