@@ -60,7 +60,7 @@ console.log(totalEstudantes(allLessons))
 // console.log(sum);
 // 7 Crie uma função que obtenha o valor da chave de acordo com a sua posição no objeto. Por exemplo:
 function valorChave (object, indice) {
-  var result = Object.values(object)
+  let result = Object.values(object)
   return result[indice]
 }
 console.log(valorChave(lesson3, 0))
