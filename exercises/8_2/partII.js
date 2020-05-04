@@ -44,3 +44,27 @@ allLessons.lesson1 = Object.assign({},lesson1)
 allLessons.lesson2 = Object.assign({},lesson2)
 allLessons.lesson3 = Object.assign({},lesson3)
 console.log(allLessons)
+// 6 Usando o objeto criado no exercício 5, crie uma função que retorne o número total de estudantes em todas as aulas.
+const sum = (allLessons.lesson1.numeroEstudantes) +
+(allLessons.lesson2.numeroEstudantes) +
+(allLessons.lesson3.numeroEstudantes);
+console.log(sum);
+// 7 Crie uma função que obtenha o valor da chave de acordo com a sua posição no objeto. Por exemplo:
+function valorChave (object, indice) {
+  var result = Object.values(object)
+  return result[indice]
+}
+console.log(valorChave(lesson3, 0))
+// 8 Crie uma função que verifique se o par (chave / valor) existem na função. 
+// Essa função deve possuir três parâmetros, sendo eles: o objeto, o nome da chave e o valor da chave.
+function verification (objt, key, value) {
+  const aux = objt[key]
+  if (aux === value){
+    return true
+  } else {
+    return false
+  }
+}
+console.log(verification(lesson3, 'materia', 'Maria Clara'))
+
+
