@@ -60,27 +60,20 @@ console.log(totalEstudantes(allLessons))
 // console.log(sum);
 // 7 Crie uma função que obtenha o valor da chave de acordo com a sua posição no objeto. Por exemplo:
 function valorChave (object, indice) {
-  let result = Object.values(object)
-  return result[indice]
+  return Object.values(object)[indice]
 }
 console.log(valorChave(lesson3, 0))
 // 8 Crie uma função que verifique se o par (chave / valor) existem na função. 
 // Essa função deve possuir três parâmetros, sendo eles: o objeto, o nome da chave e o valor da chave.
-function verification (objt, key, value) {
-  const aux = objt[key]
-  if (aux === value){
-    return true
-  } else {
-    return false
-  }
-}
+
+const verification = (obj, key, value) => obj[key] === value ? true : false; 
+
 console.log(verification(lesson3, 'materia', 'Maria Clara'))
 
 // Bonus 1 :
 // Crie uma função para contar quantos estudantes assistiram as aulas de matemática. Use o objeto criado no exercício 5. allLessons
-function sum2 (obj) {
-  return obj.lesson1.numeroEstudantes + obj.lesson3.numeroEstudantes
-}
+const sum2 = (obj) => obj.lesson1.numeroEstudantes + obj.lesson3.numeroEstudantes
+
 console.log(sum2(allLessons))
 // Bonus 2 :
 // Crie uma função que deverá retornar um objeto que representa o relatório do professor ou professora, 
