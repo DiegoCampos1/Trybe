@@ -37,3 +37,10 @@ console.log(lenght(lesson3));
 // 4 Crie uma função para listar os valores de um objeto. Essa função deve receber um objeto como parâmetro.
 const values = (obj) => Object.values(obj)
 console.log(values(lesson3));
+// 5 Crie um objeto de nome allLessons, que deve agrupar todas as aulas através do Object.assign. 
+// Cada chave desse novo objeto será uma aula, sendo essas chaves: lesson1, lesson2 e lesson3.
+let allLessons = {}
+allLessons.lesson1 = Object.assign({},lesson1)
+allLessons.lesson2 = Object.assign({},lesson2)
+allLessons.lesson3 = Object.assign({},lesson3)
+console.log(allLessons)

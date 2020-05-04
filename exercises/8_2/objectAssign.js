@@ -19,5 +19,5 @@ const family = {
   wife: 'Ana',
 };
 
-Object.assign(person, info, family)
+Object.assign(person, info, family) 
 console.log(person)
