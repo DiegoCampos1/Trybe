@@ -5,7 +5,6 @@ const removeMiddle = (arr) => {
   return arr.splice(index,1)
 }
 
-
 const words = ['mouse', 'giraffe', 'queen', 'window', 'bottle'];
 const expectedWords = ['mouse', 'giraffe', 'window', 'bottle'];
 const expectedOutput = ['queen'];
