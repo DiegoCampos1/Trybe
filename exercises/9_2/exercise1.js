@@ -80,5 +80,4 @@ const fantasyOrScienceFictionAuthors = () =>
     .map((a) => a.author.name)
     .sort();
 
-
 assert.deepEqual(fantasyOrScienceFictionAuthors(), expected_result);
