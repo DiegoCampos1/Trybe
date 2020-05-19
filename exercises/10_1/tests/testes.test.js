@@ -6,6 +6,8 @@ describe('Suíte de Testes', () => {
 
   test('soma 1 e 2 para dar 3', () => {
      expect(calcs.sum(1, 2)).toEqual(3)
+     expect(calcs.sum(-2, 2)).toEqual(0)
+
   })
 
   test('divide 10 por 3 para dar 3.33...', () => {
