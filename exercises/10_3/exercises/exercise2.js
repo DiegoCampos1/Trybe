@@ -7,7 +7,9 @@ const array = new Promise((resolve, reject) => {
   const sumArr = arr.reduce((acc, cur) => acc + cur * cur,0)
   
   if (sumArr < 8000) {
-    resolve ("Succes")
+    const divisores = [2, 3, 5, 10]
+    const sumDiv = divisores.map(divisor => sumArr/divisor)
+    resolve (sumDiv)
   } else {
     reject ("É mais de oito mil! Essa promise deve estar quebrada!”")
   }
