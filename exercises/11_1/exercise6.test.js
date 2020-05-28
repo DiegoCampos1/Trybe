@@ -18,7 +18,7 @@ const findAnimalsByName = (name) => (
   })
 );
 
-const getAnimal = (name) => findAnimalsByName(name)
+const getAnimal = (name) => findAnimalsByName(name);
 
 
 // console.log(getAnimal('Dorminhoco'))

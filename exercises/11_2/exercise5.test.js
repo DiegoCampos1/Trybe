@@ -8,7 +8,7 @@ describe('Questão 5', () => {
     const mockUpperCase = jest
     .spyOn(functions, "upperCase")
     .mockImplementation(word => word.toLowerCase());
-
+    
     expect(functions.upperCase('TESTE')).toBe('teste')
     
     functions.upperCase.mockRestore();

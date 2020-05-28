@@ -1,7 +1,3 @@
-// function randomNumber() {
-//   return Math.floor(Math.random * 101);
-// }
-
 let { randomNumber, upperCase, first, concat } = require('./functionsExercises');
 
 describe("Exercise 1", () => {
@@ -12,8 +8,6 @@ describe("Exercise 1", () => {
     expect(randomNumber).toHaveBeenCalledTimes(1);
   });
 });
-
-
 
 describe("Exercise 2", () => {
   test("Divisao entre dois numeros", () => {
@@ -33,10 +27,6 @@ describe("Exercise 3", () => {
   });
 });
 
-// let upperCase = (str) => str.toUpperCase()
-// let first = (str) => str[0];
-// let concat = (str1, str2) => str1 + str2;
-
 describe("Exercise 4", () => {
   test("Novas implementações", ()=>{
     upperCase = jest.fn().mockImplementationOnce((str) => str.toLowerCase());
@@ -46,8 +36,7 @@ describe("Exercise 4", () => {
     expect(upperCase('Aaa')).toBe('aaa');
     expect(first('Aaa')).toBe('a');
     expect(concat('a', 'b', 'c')).toBe('abc');
+    
   });
 });
-
-
 
