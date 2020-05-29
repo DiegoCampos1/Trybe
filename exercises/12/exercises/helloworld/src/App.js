@@ -8,10 +8,19 @@ const task = () => {
   return li;
 };
 
+class Greeting extends React.Component {
+  render() {
+    return <h1>Hello, {this.props.name} {this.props.lastName}</h1>;
+  }
+}
+
 function App() {
   return (
     <div className="App">
       <header className="App-header">
+      <div>
+      <Greeting name="Diego" lastName="Campos" />
+    </div>
         <ul>
           {task()}
         </ul>
