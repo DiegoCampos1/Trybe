@@ -1,16 +1,18 @@
-import React from 'react';
+import React from "react";
 
-import Pokemon from './Pokemon'
+import Pokemon from "./Pokemon";
 
 class Pokedex extends React.Component {
-  render () {
-
-    const { todosPokemons } = this.props;
+  render() {
+    const { todosPokemons , filter } = this.props;
     return (
       <div>
-        { todosPokemons.map(e => <Pokemon key={e.name} pokemon={e}/> ) }
+        {todosPokemons.filter(e => e.name === filter.name)
+        .map((e) => (
+          <Pokemon key={e.name} pokemon={e} />
+        ))}
       </div>
-    )
+    );
   }
 }
 
