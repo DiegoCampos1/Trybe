@@ -1,0 +1,7 @@
+.card-pokemon {
+  border: 1px solid gray;
+  border-radius: 5%;
+  text-align: center;
+  padding: 0.3em;
+  font-size: 1.3em;
+}

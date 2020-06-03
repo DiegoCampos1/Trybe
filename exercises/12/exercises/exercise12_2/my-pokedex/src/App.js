@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import pokemons from './data';
 import Pokedex from './components/Pokedex';
+import Buttons from './components/Buttons';
 // import Pokemon from './Pokemon.js'
 
 let indice = 0;
@@ -26,10 +27,10 @@ class App extends React.Component {
 
   filterPokemons = (typePokemon) => {
     indice = 0;
-    const filterFire = pokemons.filter(
+    const filterTypes = pokemons.filter(
       (pokemons) => pokemons.type === typePokemon,
     );
-    pokemons2 = filterFire;
+    pokemons2 = filterTypes;
 
     pokemons2.length <= 1
       ? this.setState({
@@ -47,28 +48,30 @@ class App extends React.Component {
   all = () => {
     indice = 0;
     pokemons2 = pokemons;
-    return this.setState({ type: pokemons2, filter: pokemons2[indice] , disabled: false });
+    return this.setState({
+      type: pokemons2,
+      filter: pokemons2[indice],
+      disabled: false,
+    });
   };
 
   render() {
     return (
       <div className="App">
-        {/* {console.log(this.state.filter)} */}
+        <h1>Pokedex</h1>
         <Pokedex todosPokemons={this.state.type} filter={this.state.filter} />
-        <button onClick={this.next} disabled={this.state.disabled}>
-          Next Pokemon
-        </button>
-        {/* <button>Normal</button> */}
-        <button onClick={this.all}>All</button>
-        <button onClick={() => this.filterPokemons('Fire')}>Fire</button>
-        <button onClick={() => this.filterPokemons('Psychic')}>Psychic</button>
-        <button onClick={() => this.filterPokemons('Electric')}>
-          Electric
-        </button>
-        <button onClick={() => this.filterPokemons('Bug')}>Bug</button>
-        <button onClick={() => this.filterPokemons('Poison')}>Poison</button>
-        <button onClick={() => this.filterPokemons('Normal')}>Normal</button>
-        <button onClick={() => this.filterPokemons('Dragon')}>Dragon</button>
+        <div className="buttons-type">
+        <Buttons onClick={this.all} name={'All'} />
+
+        <Buttons onClick={() => this.filterPokemons('Fire')} name={'Fire'} />
+        <Buttons onClick={() => this.filterPokemons('Psychic')} name={'Psychic'} />
+        <Buttons onClick={() => this.filterPokemons('Electric')} name={'Electric'} />
+        <Buttons onClick={() => this.filterPokemons('Bug')} name={'Bug'} />
+        <Buttons onClick={() => this.filterPokemons('Poison')} name={'Poison'} />
+        <Buttons onClick={() => this.filterPokemons('Normal')} name={'Normal'} />
+        <Buttons onClick={() => this.filterPokemons('Dragon')} name={'Dragon'} />
+        </div>
+        <Buttons onClick={this.next} disabled={this.state.disabled} name={'Next Pokemon'} />
       </div>
     );
   }
