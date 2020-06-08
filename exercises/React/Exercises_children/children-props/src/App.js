@@ -28,7 +28,7 @@ class App extends Component {
         <Pictures
           src="https://course.betrybe.com/images/logo_white.png"
           alt="Logo da Trybe"
-          height="100"
+          height={100}
           legenda="Lista feita na Trybe"
         />
       </div>
