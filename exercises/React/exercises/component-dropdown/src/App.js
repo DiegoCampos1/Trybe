@@ -46,7 +46,7 @@ class App extends Component {
             
           />
         )}
-        <Dropdown content={content}>Título da lista customizado</Dropdown>
+        <Dropdown content={content}></Dropdown>
 
       </div>
     );

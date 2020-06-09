@@ -1,0 +1,7 @@
+.display-on {
+  border: 1px solid black;
+}
+
+.display-off {
+  display: none;
+}

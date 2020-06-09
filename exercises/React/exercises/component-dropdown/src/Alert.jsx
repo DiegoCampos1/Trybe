@@ -4,30 +4,27 @@ import './Alert.css';
 
 const Alert = (props) => {
   const { hideComponent } = props;
-  const { title, content, timeSeconds} = props.information
-  setTimeout(() => hideComponent(), timeSeconds*1000);
+  const { title, content, timeSeconds } = props.information;
+  setTimeout(() => hideComponent(), timeSeconds * 1000);
   return (
-    <div className='Alert'>
+    <div className="Alert">
       <h1>{title}</h1>
       <p>{content}</p>
     </div>
-  )
-}
-
+  );
+};
 
 Alert.defaultProps = {
-  information: { title: 'Jogos preferidos', content: "Jogo pra caramba!!!", timeSeconds: 3 },
+  information: { title: 'Jogos preferidos', content: 'Jogo pra caramba!!!', timeSeconds: 3 },
 };
 
 Alert.propTypes = {
- 
+  hideComponent: PropTypes.func.isRequired,
   information: PropTypes.shape({
-    title: PropTypes.string,
+    title: PropTypes.string.isRequired,
     content: PropTypes.string,
-    timeSeconds: PropTypes.number
-  })
-}
-
-
+    timeSeconds: PropTypes.number,
+  }),
+};
 
 export default Alert;
