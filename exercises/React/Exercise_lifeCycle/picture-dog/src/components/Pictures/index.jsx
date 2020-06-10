@@ -7,9 +7,9 @@ class Pictures extends Component {
   render() {
     return (
       <div>
-        <h3>Foto atual:</h3>
+        <h3>Fotos de serumaninhos fofos:</h3>
         <PictureElement />
-        <p>Uma bela foto de catioro você não acha??</p>
+        
         
       </div>
     );
