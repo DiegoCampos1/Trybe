@@ -1,0 +1,162 @@
+React Router:
+
+Do que você será capaz?
+
+1-Utilizar o componente BrowserRouter corretamente;
+
+2-Criar links de navegação na aplicação com o componente Link;
+
+3-Criar rotas, mapeando o caminho da URL com o componente correspondente, via Route;
+
+4-Estruturar e organizar as rotas da sua aplicação com o componente Switch;
+
+5-Usar o componente Redirect pra alternar entre rotas.
+
+------------------------------------------------------------------------------------------------------
+
+O React é um Single Page Application (SPA):
+De maneira geral tem apenas um indexHTML ganha-se muito com cash, e depois vamos carregando os dados, o que o torna mais rapida.
+A troca de dados é mais rapida, a experiencia fica mais prazerosa. Apesar de um loading inicial
+
+instalação: npm install react-router-dom
+
+componentes BrowserRouter e Route:
+import { BrowserRouter } from 'react-router-dom';
+envolver o App entre o BrowserRouter. no index.js
+
+é necessario importar também o Switch e o Route do 'react-router-dom;
+import { Switch, Route } from 'react-router-dom';
+
+------------------------------------------------------------------------------------------------------
+
+
+Dentro do Switch passa o Route ele vai especificar que rota aponta para qual componente.
+ex.:
+
+<Switch>
+  <Route path="/page1" component={View1} />
+  <Route path="/page2" component={View2} />
+  <Route path="/page3" component={View3} />
+</Switch>
+
+O que vai dentro de component é realmente um componente. dentro de path é a rota.
+
+BrowserRouter: é o componente que vai encapsular sua aplicação, o que possibilita fazer uma navegação.
+
+Route: É fundamental ele estabelece a relação de um caminho URL com determinado componente, pode ser feito das seguintes forma:
+<Route path="/about" component={About} /> para quando se que usar correspondencia do /about mas permite /about/estabelece
+<Route exact ="/about" component={About} /> Para quando se quer uma correspondencia exata!
+
+OBS !important: É possivel passar componentes em rotas como elemente children: 
+<Route path="/about" >
+  <About />
+</Route>
+
+------------------------------------------------------------------------------------------------------
+
+-> Se houver vários componentes apresentando correspondência entre seu caminho de URL e o caminho atual da aplicação, 
+todos os componentes apresentando correspondência serão renderizados. Ou seja, suponha que houvesse a seguinte lista 
+de componentes do tipo Route:
+
+<Route path="/about" component={About} />
+<Route path="/contact" component={Contact} />
+<Route path="/" component={Home} />
+  
+Se o caminho atual da URL da aplicação for /, todos esses componentes serão renderizados, haja vista que 
+todas as rotas não fazem correspondência exata entre o caminho da URL atual e o definido via prop path, 
+e fazer path="/" faz correspondência com qualquer caminho de URL;
+
+Agora, se o caminho atual da URL da aplicação for /contact, os componentes Contact e Home serão renderizados. 
+Isso pode ser um problema, e uma forma de atacá-lo é organizar essas rotas via componente Switch.
+ 
+------------------------------------------------------------------------------------------------------
+
+-Link, é necessario importar, e usa no lugar do <a> funciona como ancora.
+sem o recarregamento de página que a tag a exige.
+
+<Link to="/page1"> Page 1 </Link> 
+O nome da rota não precisa ser o nome do componente.
+Ele mantei o componente mãe e vai trocar apenas o Switch - uma beleza!
+Altera a URL - isso não faz com que ela deixa de ser uma SPA
+
+Definir uma route por default é bom que se use o exact="/"
+
+------------------------------------------------------------------------------------------------------
+
+É POSÍVEL USAR O ROUTE COM PROPS:
+Ao em vez de chamar component, chamamos o render:
+<Route path="/movies" render={(props) => <Movies {...props} movies={['Cars', 'Toy Story', 'The Hobbit']} />} />;
+
+------------------------------------------------------------------------------------------------------
+
+Rotas dinamicas:
+<Route path='/:handle' component={Profile} />
+
+class Profile extends React.Component {
+  state = {
+    user: null
+  }
+  componentDidMount () {
+    const { handle } = this.props.match.params
+
+    fetch(`https://api.twitter.com/user/${handle}`)
+      .then((user) => {
+        this.setState(() => ({ user }))
+      })
+  }
+  render() {
+    ...
+  }
+}
+
+------------------------------------------------------------------------------------------------------
+
+SWITCH
+
+O componente Switch é usado para encapsular um conjunto de rotas que você definiu via Route
+
+Dada a URL atual da aplicação, o Switch procura de cima para baixo pelo primeiro Route que 
+possuir correspondência entre seu caminho definido na prop path do componente e a 
+URL atual da aplicação. Ou seja, se tivermos um Switch com as rotas
+
+Exemplo de uso:
+<Switch>
+  <Route path="/about" component={About} />
+  <Route path="/contact" component={Contact} />
+  <Route path="/movies" component={Movies} />
+  <Route path="/" component={Home} />
+</Switch>
+
+Devido ao fato de procurar rotas de cima para baixo, recomenda-se definir as rotas mais 
+específicas primeiro e deixar as mais genéricas por último.
+
+------------------------------------------------------------------------------------------------------
+
+REDIRECT 
+
+Rendering a <Redirect> will navigate to a new location. The new location will override the current location in the history stack, like server-side redirects (HTTP 3xx) do.
+
+<Route exact path="/">
+  {loggedIn ? <Redirect to="/dashboard" /> : <PublicHomePage />}
+</Route>
+
+em string:
+<Redirect to="/somewhere/else" />
+
+em objeto: (A location to redirect to. pathname can be any valid URL path tha)
+<Redirect
+  to={{
+    pathname: "/login",
+    search: "?utm=your+face",
+    state: { referrer: currentLocation }
+  }}
+/>
+O objeto de estado pode ser acedida através this.props.location.state no componente 
+redireccionado-para. Esta nova chave de referência (que não é um nome especial), então, 
+ser acessado através this.props.location.state.referrer no componente Entrada apontado
+pelo caminho '/ login'
+
+Conforme o próprio nome diz, Redirect é um componente que permite ativamente levar quem usa a 
+aplicação para diferentes locais dela. Um caso de uso bastante comum de Redirect é autenticação: 
+a pessoa só pode acessar informações sensíveis (tipo conta bancária) de uma aplicação se ela já 
+estiver autenticada; caso contrário, ela é redirecionada para uma página de login.
