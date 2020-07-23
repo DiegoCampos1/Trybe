@@ -21,6 +21,6 @@ class List extends React.Component {
 const mapStateToProps = state => ({
   list: state.listReducer});
 
-export default connect(mapStateToProps)(List);
+export default connect(mapStateToProps)(List); /* Os componentes usam o connect para conectarem-se ao Store; */
 
 // Como no caso estamos fazendo apenas leitura dos dados, basta passar a função mapStateToProps no primeiro parênteses e o componente no segundo.

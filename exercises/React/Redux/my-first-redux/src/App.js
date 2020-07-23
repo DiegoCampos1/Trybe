@@ -9,7 +9,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <Provider store={store}>
+        <Provider store={store}> {/* O Store é disponibilizado através do Provider para todos os componentes da aplicação; */}
           <InputsList />
           <List />
         </Provider>

@@ -27,7 +27,7 @@ class InputsList extends React.Component {
 const mapDispatchToProps = (dispatch) => ({
   // Retorno sempe em objeto
   add: (e) =>
-    dispatch(
+    dispatch( 
       addAssignment(e),
     ) /*estamos nomeando uma propriedade chamada add, que faz o dispatch da action addAssignment com um parâmetro.*/,
 });
